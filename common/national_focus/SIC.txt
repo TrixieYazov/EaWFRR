@@ -8300,6 +8300,732 @@ focus_tree = {
 		}
 	}
 
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+#####################################################################################
+
+#Frederick gets wacky
+
+	focus = {
+		id = SIC_the_imperial_restoration
+		icon = GFX_SIC_facing_the_sun
+		cost = 10
+		x = 114
+		y = 8
+		ai_will_do = { factor = 10 }
+		available = {
+			has_country_leader = {
+				id = 50003
+				ruling_only = yes 
+				name = "Frederick of Yale-Gamia"
+			}
+			has_completed_focus = SIC_a_nation_of_warriors
+			has_completed_focus = SIC_a_legacy_to_consider
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_imperial_restoration"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_the_sharpened_claws
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_imperial_restoration }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_the_imperial_restoration
+		ai_will_do = { factor = 100 }
+		available = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_sharpened_claws"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_the_greatest_of_peoples
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_imperial_restoration }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_the_imperial_restoration
+		ai_will_do = { factor = 100 }
+		available = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_greatest_of_peoples"
+			
+		}
+	}
+
+	focus = {
+		id = SIC_the_problem_before_us
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_sharpened_claws }
+		prerequisite = { focus = SIC_the_greatest_of_peoples }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_the_sharpened_claws
+		ai_will_do = { factor = 100 }
+		available = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_problem_before_us"
+			set_country_flag = SIC_frederick_conquering
+		}
+	}
+	
+	
+
+	focus = {
+		id = SIC_the_eastern_counties
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_problem_before_us }
+		cost = 10
+		x = -12
+		y = 1
+		relative_position_id = SIC_the_problem_before_us
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_flag = SIC_frederick_conquering
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_eastern_counties"
+			clr_country_flag = SIC_frederick_conquering
+		}
+	}
+
+	focus = {
+		id = SIC_cyanlosia
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_eastern_counties }
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = SIC_the_eastern_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_cyanlosia"
+		}
+	}
+
+	focus = {
+		id = SIC_a_meeting_with_taillow
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_cyanlosia }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_cyanlosia
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_meeting_with_taillow"
+		}
+	}
+
+	focus = {
+		id = SIC_a_deep_reflection
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_a_meeting_with_taillow }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_a_meeting_with_taillow
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_deep_reflection"
+		}
+	}
+
+	focus = {
+		id = SIC_a_daring_proposal
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_a_deep_reflection }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_a_deep_reflection
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_daring_proposal"
+		}
+	}
+
+	focus = {
+		id = SIC_a_royal_unification
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_a_deep_reflection }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_a_deep_reflection
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = CYA
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_royal_unification"
+			#sets into place a multi month event chain that ends in marriage
+		}
+	}
+
+	focus = {
+		id = SIC_asterion
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_eastern_counties }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_the_eastern_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = MIT
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_asterion"
+		}
+	}
+
+	focus = {
+		id = SIC_the_roaring_bulls
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_asterion }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_asterion
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = MIT
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_roaring_bulls"
+		}
+	}
+
+	focus = {
+		id = SIC_our_rifles_ready
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_asterion }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_asterion
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = MIT
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_rifles_ready"
+		}
+	}
+
+	focus = {
+		id = SIC_the_red_cloth
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_roaring_bulls }
+		prerequisite = { focus = SIC_our_rifles_ready }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_the_roaring_bulls
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = MIT
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_red_cloth"
+			#event that means MIT declares war on SIC
+		}
+	}
+
+	focus = {
+		id = SIC_the_spoils_of_aster
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_red_cloth }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_the_red_cloth
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 386
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_spoils_of_aster"
+			#event that means MIT declares war on SIC
+		}
+	}
+
+	focus = {
+		id = SIC_the_east_tamed
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_a_royal_unification }
+		prerequisite = { focus = SIC_the_spoils_of_aster }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_a_royal_unification
+		ai_will_do = { factor = 100 }
+		available = {
+			NOT = {
+				country_exists = CYA
+				country_exists = MIT
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_a_daring_proposal"
+			set_country_flag = SIC_frederick_conquering
+		}
+	}
+	
+	
+
+	focus = {
+		id = SIC_the_northern_counties
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_problem_before_us }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_the_problem_before_us
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_flag = SIC_frederick_conquering
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_northern_counties"
+			clr_country_flag = SIC_frederick_conquering
+		}
+	}
+
+	focus = {
+		id = SIC_falcoria
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_northern_counties }
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = SIC_the_northern_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = FAL
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_falcoria"
+		}
+	}
+
+	focus = {
+		id = SIC_fortify_our_islands
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_falcoria }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_falcoria
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = FAL
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_fortify_our_islands"
+		}
+	}
+
+	focus = {
+		id = SIC_the_drawing_of_weapons
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_falcoria }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_falcoria
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = FAL
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_drawing_of_weapons"
+		}
+	}
+
+	focus = {
+		id = SIC_attack
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_drawing_of_weapons }
+		prerequisite = { focus = SIC_fortify_our_islands }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_fortify_our_islands
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = FAL
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_attack"
+		}
+	}
+
+	focus = {
+		id = SIC_sacking_matton
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_attack }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_attack
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 529
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_sacking_matton"
+		}
+	}
+
+	focus = {
+		id = SIC_blackrock
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_northern_counties }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_the_northern_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BAN
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_blackrock"
+		}
+	}
+
+	focus = {
+		id = SIC_promise_order
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_blackrock }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_blackrock
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BAN
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_promise_order"
+		}
+	}
+
+	focus = {
+		id = SIC_mountaineer_brigades
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_blackrock }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_blackrock
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BAN
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_mountaineer_brigades"
+		}
+	}
+
+	focus = {
+		id = SIC_subdue_the_anarchists
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_mountaineer_brigades }
+		prerequisite = { focus = SIC_promise_order }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_promise_order
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BAN
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_subdue_the_anarchists"
+		}
+	}
+
+	focus = {
+		id = SIC_mountain_riches
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_subdue_the_anarchists }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_subdue_the_anarchists
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 446
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_mountain_riches"
+		}
+	}
+
+	focus = {
+		id = SIC_the_north_reclaimed
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_mountain_riches }
+		prerequisite = { focus = SIC_sacking_matton }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_sacking_matton
+		ai_will_do = { factor = 100 }
+		available = {
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_north_reclaimed"
+			set_country_flag = SIC_frederick_conquering
+		}
+	}
+	
+	
+
+	focus = {
+		id = SIC_the_western_counties
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_problem_before_us }
+		cost = 10
+		x = 10
+		y = 1
+		relative_position_id = SIC_the_problem_before_us
+		ai_will_do = { factor = 100 }
+		available = {
+			has_country_flag = SIC_frederick_conquering
+			has_completed_focus = SIC_the_north_reclaimed
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_northern_counties"
+			clr_country_flag = SIC_frederick_conquering
+		}
+	}
+
+	focus = {
+		id = SIC_wingbardy
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_western_counties }
+		cost = 10
+		x = -3
+		y = 1
+		relative_position_id = SIC_the_western_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = WNG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_wingbardy"
+		}
+	}
+
+	focus = {
+		id = SIC_anti_tank_tactics
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_wingbardy }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_wingbardy
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = WNG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_anti_tank_tactics"
+		}
+	}
+
+	focus = {
+		id = SIC_the_true_fascism
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_wingbardy }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_wingbardy
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = WNG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_true_fascism"
+		}
+	}
+
+	focus = {
+		id = SIC_to_karthin
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_anti_tank_tactics }
+		prerequisite = { focus = SIC_the_true_fascism }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_anti_tank_tactics
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = WNG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_to_karthin"
+		}
+	}
+
+	focus = {
+		id = SIC_the_ancient_wealth
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_to_karthin }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_to_karthin
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 371
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_ancient_wealth"
+		}
+	}
+
+	focus = {
+		id = SIC_griffonstone
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_western_counties }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_the_western_counties
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BOI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_griffonstone"
+		}
+	}
+
+	focus = {
+		id = SIC_our_ancient_home
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_griffonstone }
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = SIC_griffonstone
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BOI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_our_ancient_home"
+		}
+	}
+
+	focus = {
+		id = SIC_the_true_heirs
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_griffonstone }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_griffonstone
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BOI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_true_heirs"
+		}
+	}
+
+	focus = {
+		id = SIC_seize_the_throne
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_our_ancient_home }
+		prerequisite = { focus = SIC_the_true_heirs }
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = SIC_our_ancient_home
+		ai_will_do = { factor = 100 }
+		available = {
+			country_exists = BOI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_seize_the_throne"
+		}
+	}
+
+	focus = {
+		id = SIC_the_sacred_city
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_seize_the_throne }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = SIC_seize_the_throne
+		ai_will_do = { factor = 100 }
+		available = {
+			owns_state = 389
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_sacred_city"
+		}
+	}
+
+	focus = {
+		id = SIC_the_west_seized
+		icon = GFX_SIC_facing_the_sun
+		prerequisite = { focus = SIC_the_ancient_wealth }
+		prerequisite = { focus = SIC_the_sacred_city }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = SIC_the_ancient_wealth
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SIC_the_west_seized"
+			set_country_flag = SIC_frederick_conquering
+		}
+	}
+
 
 
 
